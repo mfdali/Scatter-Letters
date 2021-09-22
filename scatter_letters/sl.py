@@ -90,7 +90,7 @@ def get_masked_data(letter, intensity = 2, rand=True, in_path=None):
     """
     # get mask from image
     if in_path:
-        mask = cv2.imread(os.path.join(in_path, f'{letter.upper()}.png',0))
+        mask = cv2.imread(os.path.join(in_path, f'{letter.upper()}.png'),0)
         mask = cv2.flip(mask, 0)
     else:
         dir_path = os.path.dirname(os.path.realpath(__file__))
